@@ -115,7 +115,7 @@ def main(args):
     
     ## Set debug mode parameters
     if args.debug:  # fast eval for DEBUG mode
-        raw_config['train']['main']['check_val_every'] = 2
+        raw_config['train']['main']['check_val_every'] = 0.001 #Emily changed this.
         raw_config['diffusion_params']['num_timesteps'] = 4
         raw_config['train']['main']['batch_size'] = 4096
         raw_config['sample']['batch_size'] = 10000
